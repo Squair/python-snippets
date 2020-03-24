@@ -11,10 +11,8 @@ def isPalindrome(num):
         #Floor division using 10 to power i so number is less than 10, then get the modulus of 10
         numList.append((num // (10 ** i)) % 10)
 
-    if (numList == numList[::-1]):
-        return True
-    else:
-        return False
+    #Check the reverse of the list matches original
+    return True if numList == numList[::-1] else False
 
 #Driver data
 print(isPalindrome(892))
